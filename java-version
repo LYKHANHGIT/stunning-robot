@@ -1,0 +1,44 @@
+            - tên: Cài đặt Java JDK
+  sử dụng: actions/setup-java@v5.0.0
+  với:
+    # Phiên bản Java cần thiết lập. Cần có phiên bản Java đầy đủ hoặc phiên bản Java semver. Xem ví dụ về cú pháp được hỗ trợ trong tệp README
+    java-version: # tùy chọn
+    # Đường dẫn đến tệp `.java-version`. Xem ví dụ về cú pháp được hỗ trợ trong tệp README
+    java-version-file: # tùy chọn
+    # Bản phân phối Java. Xem danh sách các bản phân phối được hỗ trợ trong tệp README
+    phân bổ:
+    # Loại gói (jdk, jre, jdk+fx, jre+fx)
+    java-package: # tùy chọn, mặc định là jdk
+    # Kiến trúc của gói (mặc định là kiến ​​trúc của trình chạy hành động)
+    kiến trúc: # tùy chọn
+    # Đường dẫn đến nơi chứa JDK đã nén
+    jdkFile: # tùy chọn
+    # Đặt tùy chọn này nếu bạn muốn hành động kiểm tra phiên bản mới nhất có sẵn đáp ứng thông số kỹ thuật phiên bản
+    check-latest: # tùy chọn
+    # ID của kho lưu trữ distributionManagement trong tệp pom.xml. Mặc định là `github`
+    server-id: # tùy chọn, mặc định là github
+    # Tên biến môi trường cho tên người dùng để xác thực với kho lưu trữ Apache Maven. Mặc định là $GITHUB_ACTOR
+    server-username: # tùy chọn, mặc định là GITHUB_ACTOR
+    # Tên biến môi trường cho mật khẩu hoặc mã thông báo để xác thực vào kho lưu trữ Apache Maven. Mặc định là $GITHUB_TOKEN
+    server-password: # tùy chọn, mặc định là GITHUB_TOKEN
+    # Đường dẫn đến nơi tệp settings.xml sẽ được ghi. Mặc định là ~/.m2.
+    đường dẫn cài đặt: # tùy chọn
+    # Ghi đè lên tệp settings.xml nếu nó tồn tại. Mặc định là "true".
+    overwrite-settings: # tùy chọn, mặc định là đúng
+    # Khóa riêng GPG cần nhập. Mặc định là chuỗi trống.
+    gpg-private-key: # tùy chọn
+    # Tên biến môi trường cho mật khẩu khóa riêng GPG. Mặc định là $GPG_PASSPHRASE.
+    gpg-passphrase: # tùy chọn
+    # Tên của nền tảng xây dựng để lưu trữ các phụ thuộc. Có thể là "maven", "gradle" hoặc "sbt".
+    bộ nhớ đệm: # tùy chọn
+    # Đường dẫn đến tệp phụ thuộc: pom.xml, build.gradle, build.sbt, v.v. Tùy chọn này có thể được sử dụng với tùy chọn `cache`. Nếu tùy chọn này bị bỏ qua, hành động sẽ tìm kiếm tệp phụ thuộc trong toàn bộ kho lưu trữ. Tùy chọn này hỗ trợ ký tự đại diện và danh sách tên tệp để lưu trữ đệm nhiều phụ thuộc.
+    cache-dependency-path: # tùy chọn
+    # Giải pháp thay thế để chuyển trạng thái công việc sang bước đăng công việc. Biến này không dành cho việc thiết lập thủ công.
+    job-status: # tùy chọn, mặc định là ${{ job.status }}
+    # Mã thông báo được sử dụng để xác thực khi tải xuống các bản kê khai phiên bản được lưu trữ trên github.com, chẳng hạn như đối với bản dựng OpenJDK của Microsoft. Khi chạy hành động này trên github.com, giá trị mặc định là đủ. Khi chạy trên GHES, bạn có thể truyền mã thông báo truy cập cá nhân cho github.com nếu gặp phải giới hạn tốc độ.
+    token: # tùy chọn, mặc định là ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Tên của ID Maven Toolchain nếu tên mặc định "${distribution}_${java-version}" không được mong muốn. Xem ví dụ về cú pháp được hỗ trợ trong tệp Sử dụng Nâng cao
+    mvn-toolchain-id: # tùy chọn
+    # Tên của Nhà cung cấp Maven Toolchain nếu không muốn sử dụng tên mặc định "${distribution}". Xem ví dụ về cú pháp được hỗ trợ trong tệp Sử dụng Nâng cao
+    mvn-toolchain-vendor: # tùy chọn
+          
